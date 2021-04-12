@@ -16,7 +16,8 @@
 <link href="css/easy-responsive-tabs.css" rel='stylesheet' type='text/css'/>
 <link rel="stylesheet" type="text/css" href="css/zoomslider.css" />
 <link rel="stylesheet" type="text/css" href="css/style.css" />
-<link href="css/font-awesome.css" rel="stylesheet"> 
+	<link href="css/buy.css" rel="stylesheet">
+<link href="css/font-awesome.css" rel="stylesheet">
 <script type="text/javascript" src="js/modernizr-2.6.2.min.js"></script>
 <!--/web-fonts-->
 <link href='http://fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>
@@ -120,6 +121,8 @@
 								<li><a href="list.html">A - z list</a></li>
 							    <li><a href="#" class="login"  data-toggle="modal" data-target="#myModal4">Login</a></li>
 							    <li><a href="#" class="login reg"  data-toggle="modal" data-target="#myModal5">Register</a></li>
+								<li><a href="#" class="reset email"  data-toggle="modal" data-target="#myModal6">Change email</a></li>
+								<li><a href="#" class="reset pass"  data-toggle="modal" data-target="#myModal7">Change password</a></li>
 						</ul>
 
 					</div>
@@ -209,6 +212,61 @@
 							</div>
 						</div>
 				<!-- //Modal1 -->
+<!-- Modal1 -->
+					<div class="modal fade" id="myModal6" tabindex="-1" role="dialog" >
+							<div class="modal-dialog">
+							<!-- Modal content-->
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+										<h4>Change email</h4>
+										<div class="login-form">
+											<form action="#" method="post">
+												<div class = "mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
+							                        <input class = "mdl-textfield__input" type = "email" id = "email" name="email" placeholder="E-mail">
+												</div>
+												<div class="col-lg-12 p-t-20 text-center">
+						                        	<button id="alteremailbtn" type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 m-r-20 btn-pink">Submit</button>
+					                         		<button type="reset" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 btn-default">Reset</button>
+				                        		</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+				<!-- //Modal1 -->
+<!-- Modal1 -->
+					<div class="modal fade" id="myModal7" tabindex="-1" role="dialog" >
+							<div class="modal-dialog">
+							<!-- Modal content-->
+								<div class="modal-content" style="height: 200px">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+										<h4>Change password</h4>
+										<div class="login-form">
+											<form action="#" method="post">
+											    <div class="col-lg-6 p-t-20">
+													  <div class = "mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
+														 <input class = "mdl-textfield__input" type = "password" id = "passwd1" name="passwd1" placeholder="New password">
+													  </div>
+												</div>
+												<div class="col-lg-6 p-t-20">
+												  <div class = "mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
+													 <input class = "mdl-textfield__input" type = "password" id = "passwd2" name="passwd2" placeholder="Confirm password" >
+												  </div>
+												</div>
+												 <div class="col-lg-12 p-t-20 text-center">
+													<button id="alterpasswdbtn" type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 m-r-20 btn-pink">Submit</button>
+													<button type="reset" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 btn-default">Reset</button>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+				<!-- //Modal1 -->
 						<!-- breadcrumb -->
 	<div class="w3_breadcrumb">
 	<div class="breadcrumb-inner">	
@@ -230,11 +288,120 @@
 							   <div class="latest-news-agile-info">
 								   <div class="col-md-8 latest-news-agile-left-content">
 											<div class="single video_agile_player">
-											       
 										            <div class="video-grid-single-page-agileits">
 														<div data-video="f2Z65fobH2I" id="video"> <img src="images/1.jpg" alt="" class="img-responsive" /> </div>
 													</div>
-													 <h4>Force 2 | Official Trailer | John Abraham, Sonakshi Sinha and Tahir Raj Bhasin</h4>
+												    <div class="m-tickets-instantly">
+                <h4>Book tickets instantly</h4>
+                <div class="m-select-date">
+                   	<select class="list_of_movies"><option value="">Select Date</option><option style="padding-left: 10px;" value="ANAN">Today, 18 jun</option><option style="padding-left: 10px;" value="CHDM">Tomorrow, 19 jun</option><option style="padding-left: 10px;" value="CHDM">saturday, 20 jun</option><option style="padding-left: 10px;" value="CHDM">sunday, 21 jun</option></select>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="now-showing-list">
+                <div class="col-md-4 movies-by-category movie-booking">
+                    <div class="movie-ticket-book">
+                        <div class="bahubali-details">
+                            <h4>Release Date:</h4>
+                            <p>Jul 10, 2015</p>
+                            <h4>Duration:</h4>
+                            <p>2 hrs 30 mins</p>
+                            <h4>Director:</h4>
+                            <p>S.S. Rajamouli.</p>
+                            <h4>Language:</h4>
+                            <p>Telugu</p>
+                            <h4>Genre:</h4>
+                            <p>Action, Romance</p>
+                            <h4>Cast & Crew:</h4>
+                            <p>Prabhas as Amarendra Baahubali and Shivudu, Rana Daggubati as Bhallala Deva in Telugu and
+                                Palvaalthevan in Tamil, Anushka Shetty as Devasena, Tamannaah as Avantika, Sathyaraj as
+                                Kattappa, Nassar as Bijjala Deva in Telugu and Pingala Devan in Tamil, Ramya Krishnan as
+                                Sivagami</p>
+                        </div>
+                    </div>
+                </div>
+				<div class="col-md-8 movies-dates">
+                    <div class="movie-date-selection">
+                        <ul>
+                            <li class="location">
+                                <a href="pic-a-movie.html"><i class="fa fa-map-marker"></i>Movie time one</a>
+                            </li>
+                            <li class="time">
+                                <a>8:30 AM</a>
+                            </li>
+                            <button class="btn btn-primary btn-light buy-btn"> BUY NOW</button>
+                        </ul>
+                    </div>
+                </div>
+				<div class="col-md-8 movies-dates">
+                    <div class="movie-date-selection">
+                        <ul>
+                            <li class="location">
+                                <a href="pic-a-movie.html"><i class="fa fa-map-marker"></i>Movie time two</a>
+                            </li>
+                            <li class="time">
+                                <a>10:00 AM</a>
+                            </li>
+                            <button class="btn btn-primary btn-light buy-btn"> BUY NOW</button>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-8 movies-dates">
+                    <div class="movie-date-selection">
+                        <ul>
+                            <li class="location">
+                                <a href="pic-a-movie.html"><i class="fa fa-map-marker"></i>Movie time three</a>
+                            </li>
+                            <li class="time">
+                                <a>11:00 AM</a>
+                            </li>
+                            <button class="btn btn-primary btn-light buy-btn"> BUY NOW</button>
+                        </ul>
+                    </div>
+                </div>
+				<div class="col-md-8 movies-dates">
+                    <div class="movie-date-selection">
+                        <ul>
+                            <li class="location">
+                                <a href="pic-a-movie.html"><i class="fa fa-map-marker"></i>Movie time four</a>
+                            </li>
+                            <li class="time">
+                                <a>3:00 PM</a>
+                            </li>
+                            <button class="btn btn-primary btn-light buy-btn"> BUY NOW</button>
+                        </ul>
+                    </div>
+                </div>
+				<div class="col-md-8 movies-dates">
+                    <div class="movie-date-selection">
+                        <ul>
+                            <li class="location">
+                                <a href="pic-a-movie.html"><i class="fa fa-map-marker"></i>Movie time five</a>
+                            </li>
+                            <li class="time">
+                                <a>6:20 PM</a>
+                            </li>
+                            <button class="btn btn-primary btn-light buy-btn"> BUY NOW</button>
+                        </ul>
+                    </div>
+                </div>
+				<div class="col-md-8 movies-dates">
+                    <div class="movie-date-selection">
+                        <ul>
+                            <li class="location">
+                                <a href="pic-a-movie.html"><i class="fa fa-map-marker"></i>Movie time six</a>
+                            </li>
+                            <li class="time">
+                                <a>9:00 PM</a>
+                            </li>
+                            <button class="btn btn-primary btn-light buy-btn"> BUY NOW</button>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="clearfix"></div>
+            </div>
+												<h4>Force 2 | Official Trailer | John Abraham, Sonakshi Sinha and Tahir Raj Bhasin</h4>
 										    </div>
 											<div class="single-agile-shar-buttons">
 											    <h5 >Share This :</h5>
