@@ -4,11 +4,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
-
-
-
-
-
     <!-- 网络 -->
     <string name="network_error">网络错误</string>
     <string name="error_view_tip">点击屏幕重试</string>

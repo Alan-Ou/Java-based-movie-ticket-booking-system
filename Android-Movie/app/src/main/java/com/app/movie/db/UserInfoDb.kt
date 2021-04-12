@@ -13,14 +13,13 @@ import android.util.Log
 class UserInfoDb(context: Context) : SQLiteOpenHelper(context, "userInfo.db", null, 1) {
 
 
-
-
     override fun onCreate(db: SQLiteDatabase?) {
 
 
         db?.execSQL(
             "create table userInfo_tab(_id integer primary key," +
                     " name text," +
+                    "nickname text," +
                     "password text)"
         )
 

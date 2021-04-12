@@ -28,13 +28,13 @@
             android:layout_marginTop="10dp"
             android:textColor="@color/colorTextPrimary"
             android:textSize="12sp"
-            tools:text="Failed to load" />
+            tools:text="加载失败了" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="Tap the screen to try again"
+            android:text="@string/error_view_tip"
             android:textColor="@color/colorTextPrimary"
             android:textSize="12sp" />
 

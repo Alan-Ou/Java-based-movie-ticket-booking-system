@@ -26,9 +26,15 @@ class WelcomeActivity : BaseActivity() {
                 override fun onAnimationEnd(view: View?) {
 
                     Handler(Looper.getMainLooper()).postDelayed(Runnable {
-                        val intent = Intent(this@WelcomeActivity, LoginActivity::class.java)
-                        startActivity(intent)
-                          finish()
+
+//                        if (isLogin()) {
+//                            startActivity(Intent(this@WelcomeActivity, MainActivity::class.java))
+//                        } else {
+//                            startActivity(Intent(this@WelcomeActivity, LoginActivity::class.java))
+//                        }
+                        startActivity(Intent(this@WelcomeActivity, MainActivity::class.java))
+                        finish()
+
                     }, 1000)
                 }
 

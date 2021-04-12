@@ -17,14 +17,15 @@ class UserInfoDao(context: Context) {
      * 注册
      */
 
-    fun addRegister(name: String, password: String): Int {
+    fun addRegister(name: String, nickname: String, password: String): Int {
 
         val db = helper.writableDatabase
         val values = ContentValues()
         values.put("name", name)
+        values.put("nickname", nickname)
         values.put("password", password)
         //填充占位符
-        val nullColumnHack = "values(null,?,?)"
+        val nullColumnHack = "values(null,?,?,?)"
         //执行SQL
         val insert = db.insert("userInfo_tab", nullColumnHack, values)
         db.close()
@@ -38,19 +39,38 @@ class UserInfoDao(context: Context) {
     fun queryUserInfo(name: String): UserInfoBean? {
         var bean: UserInfoBean? = null
         val db = helper.readableDatabase
-        val sql = "select _id,name,password from userInfo_tab where name=? "
+        val sql = "select _id,name,nickname,password from userInfo_tab where name=? "
         val selectionArgs = arrayOf(name)
         var cursor = db.rawQuery(sql, selectionArgs)
         while (cursor.moveToNext()) {
             val _id = cursor.getInt(cursor.getColumnIndex("_id"))
             val name = cursor.getString(cursor.getColumnIndex("name"))
+            val nickname = cursor.getString(cursor.getColumnIndex("nickname"))
             val password = cursor.getString(cursor.getColumnIndex("password"))
-            bean = UserInfoBean()
-            bean._id = _id
-            bean.name = name
-            bean.pswd = password
+            bean = UserInfoBean(_id, name, nickname, password)
         }
         return bean
     }
 
+
+    fun updatePwd(password: String, name: String): Int {
+
+        val db = helper.readableDatabase
+//        val sql = "update userInfo_tab set password=? where name=?"
+        val valus = ContentValues()
+        valus.put("password", password)
+        val update = db.update("userInfo_tab", valus, "name=?", arrayOf(name))
+        db.close()
+        return update
+    }
+
+    fun updateNickname(nickname: String, name: String): Int {
+
+        val db = helper.readableDatabase
+        val valus = ContentValues()
+        valus.put("nickname", nickname)
+        val update = db.update("userInfo_tab", valus, "name=?", arrayOf(name))
+        db.close()
+        return update
+    }
 }

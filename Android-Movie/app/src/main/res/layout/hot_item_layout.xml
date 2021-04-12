@@ -41,7 +41,7 @@
                     android:id="@+id/movie_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="阿凡达"
+                    android:text="银环"
                     android:textColor="#333"
                     android:textSize="16sp"
                     android:textStyle="bold" />

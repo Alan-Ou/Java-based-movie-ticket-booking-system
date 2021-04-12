@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/et_bg"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <LinearLayout
+            android:id="@+id/ll_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10:15"
+                android:textColor="@color/textColor"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="13:27散场"
+                android:textColor="#555"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40dp"
+            android:layout_toRightOf="@id/ll_left"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="原版3D"
+                android:textColor="#444"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/few_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="8号厅(激光按摩椅)"
+                android:textColor="#666"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/ll_center"
+                android:gravity="center"
+                android:text="￥63"
+                android:textColor="#FF9800"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/btn_book_bg"
+                android:paddingLeft="12dp"
+                android:paddingTop="4dp"
+                android:paddingRight="12dp"
+                android:paddingBottom="4dp"
+                android:text="购票"
+                android:textColor="#FF4925"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</LinearLayout>

@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.os.PersistableBundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.app.movie.bean.UserInfoBean
+import com.app.movie.utils.SPUtils
 
 /**
  *    author : yi.huangxing
@@ -27,6 +29,13 @@ open abstract class BaseActivity : AppCompatActivity() {
     protected open fun BaseToast(msg: String) {
 
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
+
+    }
+
+    protected fun isLogin(): Boolean {
+
+        val userInfoBean = SPUtils.getObject(this, "userInfo", UserInfoBean::class.java);
+        return userInfoBean != null
 
     }
 }

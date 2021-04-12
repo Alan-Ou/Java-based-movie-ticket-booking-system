@@ -3,7 +3,7 @@ package com.app.movie.adapter
 import android.view.View
 import android.widget.RatingBar
 import androidx.appcompat.widget.AppCompatImageView
-import com.app.movie.GlideImageLoader
+import com.app.movie.utils.GlideImageLoader
 import com.app.movie.R
 import com.app.movie.bean.Coming
 import com.chad.library.adapter.base.BaseQuickAdapter
@@ -30,14 +30,14 @@ class TheListAdapter : BaseQuickAdapter<Coming, BaseViewHolder>(R.layout.the_ite
         holder.setText(R.id.movie_name, item.nm)
         holder.setText(R.id.tv_rating, item.sc.toString())
         holder.setText(R.id.movie_time, item.rt + "中国大陆重演")
-        holder.setText(R.id.tv_movie_actor, "Starring：${item.star}") //主演
+        holder.setText(R.id.tv_movie_actor, "主演：${item.star}")
 
         if (item.sc > 0) {
             mRatingBar?.visibility = View.VISIBLE
             mRatingBar?.rating = (item.sc / 2).toFloat()
         } else {
             mRatingBar?.visibility = View.GONE
-            holder.setText(R.id.tv_rating, "No scores") //暂无评分
+            holder.setText(R.id.tv_rating, "暂无评分")
         }
 
     }

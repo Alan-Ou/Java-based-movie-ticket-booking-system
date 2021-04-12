@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".activity.UpdatePwdActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_200"
+        app:navigationIcon="@mipmap/iv_back"
+        app:title="修改密码"
+        app:titleTextColor="@color/white" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/et_bg"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="旧密码："
+            android:textColor="@color/textColor"
+            android:textSize="15sp" />
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_old_pwd"
+            style="@style/et_style_1"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:hint="请输入旧密码" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/et_bg"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="新密码："
+            android:textColor="@color/textColor"
+            android:textSize="15sp" />
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_new_pwd"
+            style="@style/et_style_1"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:hint="请输入新密码" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/et_bg"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确定密码："
+            android:textColor="@color/textColor"
+            android:textSize="15sp" />
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_confirm_pwd"
+            style="@style/et_style_1"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:hint="请输入确定密码" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="320dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_40"
+        android:background="@drawable/btn_bg"
+        android:gravity="center"
+        android:onClick="updatePwd"
+        android:text="修改密码"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+
+</LinearLayout>

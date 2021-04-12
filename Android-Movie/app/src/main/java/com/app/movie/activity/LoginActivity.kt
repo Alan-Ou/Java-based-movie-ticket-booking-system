@@ -5,6 +5,7 @@ import android.text.TextUtils
 import com.app.movie.base.BaseActivity
 import com.app.movie.databinding.ActivityLoginBinding
 import com.app.movie.db.UserInfoDao
+import com.app.movie.utils.SPUtils
 
 class LoginActivity : BaseActivity() {
 
@@ -28,22 +29,24 @@ class LoginActivity : BaseActivity() {
             val name = binding.etUserName.text.toString().trim()
             val pawd = binding.etUserPswd.text.toString().trim()
             if (TextUtils.isEmpty(name)) {
-                BaseToast("Please enter the username")
+                BaseToast("请输入用户名")
             } else if (TextUtils.isEmpty(pawd)) {
-                BaseToast("Please enter the password")
+                BaseToast("请输入密码")
             } else {
                 val userInfo = userDao.queryUserInfo(name)
                 if (null != userInfo) {
                     val name = binding.etUserName.text.toString().trim()
                     val pawd = binding.etUserPswd.text.toString().trim()
                     if (userInfo.name.equals(name) && userInfo.pswd.equals(pawd)) {
+                        SPUtils.saveObject(this@LoginActivity, "userInfo", userInfo)
                         startActivity(Intent(this, MainActivity::class.java))
+                        BaseToast("登录成功")
                         finish()
                     } else {
-                        BaseToast("Password or username is wrong")
+                        BaseToast("用户名或密码错误")
                     }
                 } else {
-                    BaseToast("Please register")
+                    BaseToast("请先注册")
                 }
             }
 

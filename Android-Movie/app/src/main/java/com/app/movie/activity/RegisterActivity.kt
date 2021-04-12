@@ -31,20 +31,20 @@ class RegisterActivity : BaseActivity() {
     }
 
 
-    fun btn_register(view: View) {
+    fun register(view: View) {
         val name = binding.etUserName.text.toString().trim()
         val pwsd = binding.etUserPswd.text.toString().trim()
         if (TextUtils.isEmpty(name)) {
-            BaseToast("Please enter username")
+            BaseToast("请输入用户名")
         } else if (TextUtils.isEmpty(pwsd)) {
-            BaseToast("Please enter password")
+            BaseToast("请输入密码")
         } else {
-            val insert = userDao.addRegister(name, pwsd)
+            val insert = userDao.addRegister(name, "游客", pwsd)
             if (insert != -1) {
-                BaseToast("Registration success")
+                BaseToast("注册成功")
                 finish()
             } else {
-                BaseToast("Registration failed")
+                BaseToast("注册失败")
             }
         }
 

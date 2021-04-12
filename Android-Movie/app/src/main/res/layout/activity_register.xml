@@ -14,7 +14,7 @@
         android:background="@color/teal_200"
         app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="@mipmap/iv_back"
-        app:title="Register"
+        app:title="注册"
         app:titleTextColor="@color/white"
         tools:ignore="MissingConstraints" />
 
@@ -26,7 +26,7 @@
         android:layout_height="46dp"
         android:layout_marginTop="140dp"
         android:digits="1234567890qwertyuiopasdfghjklzxcvbnm"
-        android:hint="Username"
+        android:hint="请输入用户名"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toolbar" />
@@ -39,7 +39,7 @@
         android:layout_height="46dp"
         android:layout_marginTop="10dp"
         android:digits="1234567890qwertyuiopasdfghjklzxcvbnm"
-        android:hint="Password"
+        android:hint="请输入密码"
         android:inputType=""
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -47,14 +47,14 @@
 
 
     <androidx.appcompat.widget.AppCompatTextView
-       android:onClick="btn_register"
+       android:onClick="register"
         android:layout_width="300dp"
         android:layout_height="44dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/btn_bg"
         android:clickable="true"
         android:gravity="center"
-        android:text="Register"
+        android:text="注册"
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintLeft_toLeftOf="parent"

@@ -38,7 +38,7 @@ public class RxHttpManager {
         File file = new File(context.getExternalCacheDir(), "RxHttpCookie");
         HttpsUtils.SSLParams sslParams = HttpsUtils.getSslSocketFactory();
         OkHttpClient client = new OkHttpClient.Builder()
-                .cookieJar(new CookieStore(file))
+//                .cookieJar(new CookieStore(file))
                 .connectTimeout(10, TimeUnit.SECONDS)
                 .readTimeout(10, TimeUnit.SECONDS)
                 .writeTimeout(10, TimeUnit.SECONDS)
@@ -51,12 +51,12 @@ public class RxHttpManager {
         //RxHttp初始化，自定义OkHttpClient对象，非必须
         RxHttp.init(client);
 
-        RxHttp.setDebug(false);
+        RxHttp.setDebug(true);
 
         //设置缓存策略，非必须
-        File cacheFile = new File(context.getExternalCacheDir(), "RxHttpCache");
-        RxHttpPlugins.setCache(cacheFile, 1000 * 100, CacheMode.REQUEST_NETWORK_FAILED_READ_CACHE);
-        RxHttpPlugins.setExcludeCacheKeys("time"); //设置一些key，不参与cacheKey的组拼
+//        File cacheFile = new File(context.getExternalCacheDir(), "RxHttpCache");
+//        RxHttpPlugins.setCache(cacheFile, 1000 * 100, CacheMode.REQUEST_NETWORK_FAILED_READ_CACHE);
+//        RxHttpPlugins.setExcludeCacheKeys("time"); //设置一些key，不参与cacheKey的组拼
 
         //设置数据解密/解码器，非必须
 //        RxHttp.setResultDecoder(s -> s);
@@ -65,19 +65,19 @@ public class RxHttpManager {
 //        RxHttp.setConverter(FastJsonConverter.create());
 
         //设置公共参数，非必须
-        RxHttp.setOnParamAssembly(p -> {
-            /*根据不同请求添加不同参数，子线程执行，每次发送请求前都会被回调
-            如果希望部分请求不回调这里，发请求前调用Param.setAssemblyEnabled(false)即可
-             */
-            Method method = p.getMethod();
-            if (method.isGet()) { //Get请求
-
-            } else if (method.isPost()) { //Post请求
-
-            }
-            return p.add("versionName", "1.0.0")//添加公共参数
-                    .add("time", System.currentTimeMillis())
-                    .addHeader("deviceType", "android"); //添加公共请求头
-        });
+//        RxHttp.setOnParamAssembly(p -> {
+//            /*根据不同请求添加不同参数，子线程执行，每次发送请求前都会被回调
+//            如果希望部分请求不回调这里，发请求前调用Param.setAssemblyEnabled(false)即可
+//             */
+//            Method method = p.getMethod();
+//            if (method.isGet()) { //Get请求
+//
+//            } else if (method.isPost()) { //Post请求
+//
+//            }
+//            return p.add("versionName", "1.0.0")//添加公共参数
+//                    .add("time", System.currentTimeMillis())
+//                    .addHeader("deviceType", "android"); //添加公共请求头
+//        });
     }
 }

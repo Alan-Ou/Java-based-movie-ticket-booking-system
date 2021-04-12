@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".activity.CenterActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/teal_200"
+            app:navigationIcon="@mipmap/iv_back"
+            app:title="我的"
+            app:titleTextColor="@color/white" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:background="#f5f5f5"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:src="@mipmap/iv_logo" />
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#444"
+                android:textSize="13sp"
+                tools:text="gson" />
+
+        </LinearLayout>
+
+<!--        <TextView-->
+<!--            android:id="@+id/name"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="45dp"-->
+<!--            android:layout_marginLeft="15dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginRight="15dp"-->
+<!--            android:background="@drawable/et_bg"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:text="昵称"-->
+<!--            android:textColor="#444" />-->
+
+
+        <TextView
+            android:onClick="updateNickname"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/et_bg"
+            android:gravity="center_vertical"
+            android:text="修改昵称"
+            android:textColor="#444" />
+
+
+        <TextView
+            android:onClick="updatePwd"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/et_bg"
+            android:gravity="center_vertical"
+            android:text="修改密码"
+            android:textColor="#444" />
+
+
+        <TextView
+            android:onClick="order"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/et_bg"
+            android:gravity="center_vertical"
+            android:text="我的订单"
+            android:textColor="#444" />
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="320dp"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/btn_bg"
+        android:gravity="center"
+        android:onClick="exit"
+        android:text="退出登录"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+</RelativeLayout>

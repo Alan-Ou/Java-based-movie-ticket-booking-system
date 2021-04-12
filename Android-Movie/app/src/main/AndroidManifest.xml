@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.app.movie">
 
-
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -15,10 +14,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Androidmovie">
         <activity
+            android:name=".activity.UpdateNicknameActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.UpdatePwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.OrderListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ConfirmBookingActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.BookingActivity" />
+        <activity
+            android:name=".activity.MovieDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CenterActivity"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".activity.RegisterActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".activity.LoginActivity"
+            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
             android:name=".activity.MainActivity"

@@ -7,12 +7,26 @@
     android:orientation="vertical"
     tools:context=".activity.MainActivity">
 
-    <androidx.appcompat.widget.Toolbar
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/teal_200"
-        app:title="Love movies"
-        app:titleTextColor="@color/white" />
+        android:layout_height="55dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/teal_200"
+            app:title="爱电影"
+            app:titleTextColor="@color/white" />
+
+        <ImageView
+            android:onClick="goCenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="12dp"
+            android:src="@mipmap/iv_user" />
+    </RelativeLayout>
 
 
     <com.google.android.material.tabs.TabLayout
