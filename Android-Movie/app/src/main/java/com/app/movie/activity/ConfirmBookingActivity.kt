@@ -2,9 +2,13 @@ package com.app.movie.activity
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.os.CountDownTimer
+import android.text.Html
 import android.text.TextUtils
 import android.util.Log
 import android.view.View
+import android.widget.TextView
+import com.app.movie.R
 import com.app.movie.base.BaseActivity
 import com.app.movie.bean.BookingBean
 import com.app.movie.bean.DetailMovie
@@ -92,6 +96,21 @@ class ConfirmBookingActivity : BaseActivity() {
         })
 
         binding.seatView.setData(10, 15)
+
+        var t: Long = 30 * 1000 // 定义选座最长时长30s
+        var countDownTimer = object : CountDownTimer(t, 1000) {
+            override fun onFinish() {
+                BaseToast("未在30s内完成选座，请重新选座！")
+                finish()
+            }
+
+            override fun onTick(millisUntilFinished: Long) {
+                var second = millisUntilFinished / 1000
+                val strMsg = "等待选座，剩余<font color=\"#FF8C00\">${ second }</font>秒"
+                val textView = findViewById<TextView>(R.id.call_time)
+                textView.text = Html.fromHtml(strMsg)
+            }
+        }.start()
 
     }
 
